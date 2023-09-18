@@ -1,0 +1,311 @@
+<html>
+
+<head>
+
+    <style>
+
+        /* Style the container */
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            margin: 0;
+
+            padding: 0;
+
+            background-color: #f0f0f0;
+
+        }
+
+ 
+
+        .navbar {
+
+            background-color: #D47C6A;
+
+            color: #fff;
+
+            text-align: center;
+
+            padding: 10px 0;
+
+        }
+
+ 
+
+        .navbar a {
+
+            text-decoration: none;
+
+            color: #fff;
+
+            margin: 0 650px;
+
+        }
+
+ 
+
+        .navbar a:hover {
+
+            text-decoration: underline;
+
+        }
+
+ 
+
+        /* Centering container */
+
+        .container {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            height: 80px;
+
+        }
+
+ 
+
+        /* Icon styles */
+
+        .icon {
+
+            font-size: 24px;
+
+            margin-right: 5px;
+
+        }
+
+ 
+
+        .abc {
+
+            display: flex;
+
+            align-items: flex-start; /* Align items to the top */
+
+        }
+
+ 
+
+        .abc img {
+
+            width: 200px;
+
+            height: 200px;
+
+            margin-right: 20px;
+
+        }
+
+ 
+
+        .xyz {
+
+            flex-grow: 1; /* Allow the form to grow and take available space */
+
+            background-color: #f4f4f4;
+
+            padding: 20px;
+
+        }
+
+ 
+
+        /* Style the form */
+
+        form {
+
+            background-color: #fff;
+
+            padding: 20px;
+
+            border: 1px solid #ddd;
+
+            border-radius: 5px;
+
+            margin: 20px;
+
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+        }
+
+ 
+
+        /* Style the labels */
+
+        label {
+
+            display: block;
+
+            margin-bottom: 10px;
+
+            color: #333;
+
+        }
+
+ 
+
+        /* Style the input fields */
+
+        input[type="text"],
+
+        input[type="email"],
+
+        input[type="tel"],
+
+        input[type="number"] {
+
+            width: 100%;
+
+            padding: 10px;
+
+            margin-bottom: 10px;
+
+            border: 1px solid #ddd;
+
+            border-radius: 5px;
+
+        }
+
+ 
+
+        /* Style the submit button */
+
+        button[type="submit"] {
+
+            background-color: #333;
+
+            color: #fff;
+
+            padding: 10px 20px;
+
+            border: none;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+        }
+
+ 
+
+        /* Add hover effect to the submit button */
+
+        button[type="submit"]:hover {
+
+            background-color: #555;
+
+        }
+
+ 
+
+        /* Edit button styles */
+
+        .edit-button {
+
+            background-color: #ffc107;
+
+            color: #333;
+
+            border: none;
+
+            border-radius: 50%;
+
+            width: 30px;
+
+            height: 30px;
+
+            font-size: 16px;
+
+            line-height: 16px;
+
+            text-align: center;
+
+            padding: 0;
+
+            margin-left: 10px;
+
+            cursor: pointer;
+
+        }
+
+ 
+
+        /* Move the username input to the bottom of the profile icon */
+
+        #username {
+
+            margin-top: 20px;
+
+        }
+
+    </style>
+
+    https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+ 
+
+<body>
+
+<div class="navbar">
+
+    <div class="container">
+
+        <a href="Booklist"><i class='bx bx-home-alt-2'></i>Home</a>
+
+        <a href="Logout"><i class='bx bx-log-out'></i> Logout</a>
+
+    </div>
+
+</div>
+
+<div class="abc">
+
+    <img src="https://www.nicepng.com/png/detail/202-2024580_png-file-profile-icon-vector-png.png"
+
+         width="200" height="200" margin-right="20">
+
+    <div class="xyz">
+
+        <form>
+
+            <label for="customerId">Customer ID:</label>
+
+            <input type="text" id="customerId" name="customerId" value="{{customerList[0].customerId}}" disabled>
+
+            <label for="firstName">First Name:</label>
+
+            <input type="text" id="firstName" name="firstName" value="{{customerList[0].firstName}}" disabled>
+
+            <label for="lastName">Last Name:</label>
+
+            <input type="text" id="lastName" name="lastName" value="{{customerList[0].lastName}}" disabled>
+
+            <label for="email">Email:</label>
+
+            <input type="email" id="email" name="email" value="{{customerList[0].email}}" disabled>
+
+            <label for="phone">Phone Number:</label>
+
+            <input type="tel" id="phone" name="phone" value="{{customerList[0].phoneNumber}}" disabled>
+
+            <button class="edit-button" (click)="edit()">✎</button>
+
+        </form>
+
+        <input type="text" id="username" name="username" value="{{customerList[0].username}}" disabled>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
